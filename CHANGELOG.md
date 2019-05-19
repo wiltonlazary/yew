@@ -1,6 +1,28 @@
 # Changelog
 
-## 0.5 - unreleased
+## 0.6 - unreleased
+
+### Breaking changes
+
+### New features
+
+- Added `start_app` method. It's a shortcut to initialize a component and mount it to the body.
+
+- Added handling of files of `input` element. There is new `ChangeData::Files` variant
+  of `onchange` handler.
+
+- Added `ReaderService` to read data from `File` instances. It supports two methods: `read_file`
+  to read an entire file at a time and `read_file_by_chunks` to read a file by small pieces of data.
+
+- New example `file_upload` that prints sizes of uploaded files.
+
+### Bug fixes
+
+- It was impossible to set `value` attribute for any tag instead of `option`, because it used
+  inner value of `VTag` to keep the value for `input` element. Now `value` attribute works
+  for `options`, `progress` tags, etc.
+
+## 0.5 - Released 2019-02-01
 
 ### Breaking changes
 
